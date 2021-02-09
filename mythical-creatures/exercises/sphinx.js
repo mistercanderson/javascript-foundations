@@ -1,15 +1,16 @@
-function Sphinx() {
-
-  this.name = null;
-  this.riddles = [];
-  this.heroesEaten = 0;
-  this.collectRiddle = (riddle) => {
+class Sphinx {
+  constructor() {
+    this.name = null;
+    this.riddles = [];
+    this.heroesEaten = 0;
+  }
+  collectRiddle(riddle) {
     this.riddles.push(riddle);
     if (this.riddles.length > 3) {
       this.riddles.shift();
     };
   };
-  this.attemptAnswer = (answer) => {
+  attemptAnswer(answer) {
     for (var i = 0; i < this.riddles.length; i++) {
       if (this.riddles[i].answer === answer) {
         this.riddles.splice(i, 1);
