@@ -46,8 +46,8 @@ describe('Direwolf', function() {
   });
 
   it('should instantiate our good friend, Stark', function() {
-    //added {} within params in order to pass test
-    const stark = new Stark({});
+  
+    const stark = new Stark();
 
     assert.isObject(stark);
   });
