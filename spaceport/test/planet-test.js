@@ -6,22 +6,22 @@ var Part = require('../src/part');
 var Shop = require('../src/shop');
 
 describe('Planet', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var planetD = new Planet({ name: 'D1' });
-    var planetF = new Planet({ name: 'D1' });
+    var planetF = new Planet({ name: 'F2' });
 
     assert.equal(planetD.name, 'D1');
     assert.equal(planetF.name, 'F2');
   });
 
-  it.skip('should be able to have a shop', function() {
+  it('should be able to have a shop', function() {
     var shop = new Shop({ name: 'EZ-mart' });
     var planet = new Planet({ name: 'F2', shop: shop });
 
     assert.equal(planet.shop.name, 'EZ-mart');
   });
 
-  it.skip('should be able to have a different shop', function() {
+  it('should be able to have a different shop', function() {
     var shop = new Shop({ name: 'Walmart' });
     var planet = new Planet({ name: 'F2', shop: shop });
 
@@ -39,7 +39,7 @@ describe('Planet', function() {
       landingGear: new Part({name: 'Legs-2', type: 'landingGear', value: 100}),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
@@ -87,7 +87,7 @@ describe('Planet', function() {
     var planet = new Planet({ name: 'F2' });
     var captian = new Being('Will', 'human');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
@@ -114,7 +114,7 @@ describe('Planet', function() {
       landingGear: new Part({ name: 'Legs-2', type: 'landingGear', value: 100 }),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
@@ -142,7 +142,7 @@ describe('Planet', function() {
       landingGear: new Part({ name: 'Legs-2', type: 'landingGear', value: 100 }),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
